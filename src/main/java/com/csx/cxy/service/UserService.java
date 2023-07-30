@@ -14,9 +14,6 @@ public class UserService {
 
     public User getUserInfo(Integer userId) {
 
-        int x = 1 /0;
-
-
         return userMapper.getUserInfo(userId);
 
     }
