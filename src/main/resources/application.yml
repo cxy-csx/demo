@@ -1,0 +1,24 @@
+spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    application:
+        name: demo
+
+server:
+    port: 8080
+
+mybatis-plus:
+    mapper-locations: classpath:mapper/*.xml
+    global-config:
+        db-config:
+            table-prefix: t_
+    configuration:
+        default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+
+
+
+
+
