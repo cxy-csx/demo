@@ -17,9 +17,9 @@ public class User {
 
     private Integer age;
 
-    private UserEnum gender;
-
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private LocalDateTime createTime;
+//    private UserEnum gender;
+//
+//    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+//    private LocalDateTime createTime;
 
 }
