@@ -12,7 +12,7 @@ spring:
     # 应用名称
     application:
         name: demo
-    # 文件存储配置
+    # 文件存储 配置文档：https://spring-file-storage.xuyanwu.cn
     file-storage:
         default-platform: qiniu-kodo-1
         qiniu-kodo:
@@ -36,7 +36,7 @@ spring:
           max-idle: 10
           min-idle: 5
 
-# Sa-Token 配置 (文档: https://sa-token.cc)
+# Sa-Token 配置文档: https://sa-token.cc
 sa-token:
   token-name: token
   timeout: 2592000
@@ -46,9 +46,14 @@ sa-token:
   token-style: uuid
   is-log: true
 
+# forest 配置文档: https://forest.dtflyx.com
+forest:
+  max-connections: 1000        # 连接池最大连接数
+  connect-timeout: 3000        # 连接超时时间，单位为毫秒
+  read-timeout: 3000           # 数据读取超时时间，单位为毫秒
 
 
-# Mybatis-Plus配置
+# Mybatis-Plus 配置文档: https://baomidou.com
 mybatis-plus:
     mapper-locations: classpath:mapper/*.xml
     global-config:
