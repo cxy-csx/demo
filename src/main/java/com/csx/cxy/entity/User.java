@@ -7,6 +7,7 @@ import lombok.Data;
 import javax.smartcardio.ATR;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class User {
@@ -16,6 +17,10 @@ public class User {
     private String name;
 
     private Integer age;
+
+
+    private List<String> test;
+
 
 //    private UserEnum gender;
 //
