@@ -10,7 +10,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NoRepeatSubmit {
 
-
+    /**
+     * 默认时间
+     * @return
+     */
     int time() default 3 * 1000;
 
 }

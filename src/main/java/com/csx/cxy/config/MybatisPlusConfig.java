@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.csx.cxy.mapper")
 public class MybatisPlusConfig {
+
+    /**
+     * 分页支持
+     */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor(){
         MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();

@@ -62,7 +62,9 @@ mybatis-plus:
     configuration:
         default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
 
-
+# knife4j 配置文档: https://doc.xiaominfo.com
+knife4j:
+  enable: true
 
 
 
