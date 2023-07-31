@@ -1,9 +1,10 @@
 package com.csx.cxy;
 
+import cn.xuyanwu.spring.file.storage.EnableFileStorage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
+@EnableFileStorage
 @SpringBootApplication
 public class MainApplication {
 

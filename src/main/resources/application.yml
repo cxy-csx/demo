@@ -1,18 +1,33 @@
+# 服务端口
+server:
+  port: 8080
+
 spring:
+    # 数据库配置
     datasource:
         url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
         username: root
         password: 123456
         driver-class-name: com.mysql.cj.jdbc.Driver
+    # 应用名称
     application:
         name: demo
+    # 文件存储配置
+    file-storage:
+        default-platform: qiniu-kodo-1
+        qiniu-kodo:
+            - platform: qiniu-kodo-1
+              enable-storage: true
+              access-key: Uxv7S8cYoVvzznmVcWegxzV-ihWvqjDR5iV3Joph
+              secret-key: jM_VBuv9TODxZ0M1F5hPUtYkyGhjutKQXzRSe93Q
+              bucket-name: md-picture-cxy-csx
+              domain: http://qiniu.cxy-csx.top/
 
 
 
 
 
-server:
-    port: 8080
+
 
 mybatis-plus:
     mapper-locations: classpath:mapper/*.xml
@@ -21,6 +36,8 @@ mybatis-plus:
             table-prefix: t_
     configuration:
         default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+
+
 
 
 
