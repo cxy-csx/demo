@@ -2,6 +2,8 @@ package com.csx.cxy.entity;
 
 import com.csx.cxy.enums.UserEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 import javax.smartcardio.ATR;
@@ -16,15 +18,16 @@ public class User {
 
     private String name;
 
+
     private Integer age;
 
 
     private List<String> test;
 
 
-//    private UserEnum gender;
-//
-//    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-//    private LocalDateTime createTime;
+    private Integer gender;
+
+
+    private LocalDateTime createTime;
 
 }
