@@ -4,6 +4,5 @@
 
 <select id="getUserInfo" resultType="com.csx.cxy.entity.User">
     select * from t_user
-    where id = #{userId}
 </select>
 </mapper>

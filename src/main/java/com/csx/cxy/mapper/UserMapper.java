@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Param;
 
 
 public interface UserMapper extends BaseMapper<User> {
-    User getUserInfo(@Param("userId") Integer userId);
+    User getUserInfo(@Param("userId") String userId);
 }

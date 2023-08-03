@@ -3,7 +3,6 @@ package com.csx.cxy.entity;
 import com.csx.cxy.enums.UserEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.swagger.models.auth.In;
 import lombok.Data;
 
 import javax.smartcardio.ATR;
@@ -25,7 +24,7 @@ public class User {
     private List<String> test;
 
 
-    private Integer gender;
+    private UserEnum gender;
 
 
     private LocalDateTime createTime;

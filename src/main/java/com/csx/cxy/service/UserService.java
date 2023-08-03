@@ -12,9 +12,11 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public User getUserInfo(Integer userId) {
+    public User getUserInfo(String userId) {
 
-        return userMapper.getUserInfo(userId);
+        userMapper.getUserInfo(userId);
+
+        return null;
 
     }
 }

@@ -51,21 +51,19 @@ public class JacksonConfig {
                         public List<BeanPropertyWriter> changeProperties(SerializationConfig config,
                                                                          BeanDescription beanDesc,
                                                                          List<BeanPropertyWriter> beanProperties) {
+
                             for (BeanPropertyWriter writer : beanProperties) {
                                 Class<?> clazz = writer.getType().getRawClass();
                                 if (clazz.isArray() || Collection.class.isAssignableFrom(clazz)) {
                                     // 集合或数组处理
                                     writer.assignNullSerializer(new NullValueSerializer.NullArrayJsonSerializer());
-                                }
-                                if (CharSequence.class.isAssignableFrom(clazz) || Character.class.isAssignableFrom(clazz)) {
+                                }else if(CharSequence.class.isAssignableFrom(clazz) || Character.class.isAssignableFrom(clazz)) {
                                     // 字符串
-                                    writer.assignNullSerializer(new NullValueSerializer.NullArrayJsonSerializer());
-                                }
-                                if (Boolean.class.equals(clazz)) {
+                                    writer.assignNullSerializer(new NullValueSerializer.NullStringJsonSerializer());
+                                }else if(Boolean.class.equals(clazz)) {
                                     // 布尔值
                                     writer.assignNullSerializer(new NullValueSerializer.NullBooleanJsonSerializer());
-                                }
-                                if (Number.class.isAssignableFrom(clazz)) {
+                                }else if(Number.class.isAssignableFrom(clazz)) {
                                     // 数值
                                     writer.assignNullSerializer(new NullValueSerializer.NullNumberJsonSerializer());
                                 }
@@ -74,8 +72,8 @@ public class JacksonConfig {
                         }
                 }));
 
-         // 处理null对象
-         objectMapper.getSerializerProvider().setNullValueSerializer(new NullValueSerializer.NullObjectJsonSerializer());
+        // 处理null对象
+        objectMapper.getSerializerProvider().setNullValueSerializer(new NullValueSerializer.NullObjectJsonSerializer());
 
         return objectMapper;
     }

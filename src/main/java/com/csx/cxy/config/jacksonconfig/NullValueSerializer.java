@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.Collection;
 
 public class NullValueSerializer {
+
+
+
     /**
      * 处理数组集合类型
      */

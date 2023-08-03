@@ -67,9 +67,34 @@ knife4j:
   enable: true
 
 
+# sms 配置文档: https://wind.kim/
+sms:
+  tencent:
+    #腾讯云的accessKey
+    accessKeyId: AKIDRgfiZH0FPO8g3LLL0RbolcIpGvrYpmCN
+    #腾讯云的accessKeySecret
+    accessKeySecret: DBt99ybxeebKnfLm3iAyf6rNHEwqUUhe
+    #短信签名
+    signature: 程序员陈师兄个人网
+    #模板ID 用于发送固定模板短信使用
+    templateId: 1883314
+    #模板变量 上述模板的变量
+    templateName: 1
+    #请求超时时间 默认60秒
+    connTimeout: 60
+    #短信sdkAppId
+    sdkAppId: 1400844272
+#    #地域信息默认为 ap-guangzhou 如无特殊改变可不用设置
+#    territory: ap-guangzhou
+#    #请求地址默认为 sms.tencentcloudapi.com 如无特殊改变可不用设置
+#    requestUrl: sms.tencentcloudapi.com
+#    #接口名称默认为 SendSms 如无特殊改变可不用设置
+#    action: SendSms
+#    #接口版本默认为 2021-01-11 如无特殊改变可不用设置
+#    version: 2021-01-11
 
 
 
-
-
-
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG

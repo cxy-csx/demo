@@ -7,6 +7,7 @@ import com.csx.cxy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,8 +18,8 @@ public class UserController {
 
 
     @NoRepeatSubmit
-    @GetMapping("getUserInfo/{userId}")
-    public R getUserInfo(@PathVariable Integer userId){
+    @GetMapping("getUserInfo")
+    public R getUserInfo(@RequestParam String  userId){
         return R.SUCCESS(userService.getUserInfo(userId));
     }
 
